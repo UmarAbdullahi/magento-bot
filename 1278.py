@@ -14,7 +14,7 @@ class TwitterBot:
     def scrape(self):
         bot = self.bot
         for v in range(17, 26):
-            bot.get('http://genuss.ng/computer-accessories.html?p='+str(v))
+            bot.get('http://magento-site.net/computer-accessories.html?p='+str(v))
             time.sleep(15)
 
             for n in range (1, 21):
@@ -149,7 +149,7 @@ class TwitterBot:
         # for pro in products:
         #     print(pro.get_attribute('src'))
 
-ed =  TwitterBot('umar','Mku4?MQ5=83oV4E>qu9:KrWBY8uG*786')
+ed =  TwitterBot('username','password')
 ed.scrape()
 # ed.login()
 # ed.addProduct()
