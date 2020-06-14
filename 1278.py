@@ -13,7 +13,7 @@ class TwitterBot:
 
     def scrape(self):
         bot = self.bot
-        for v in range(17, 26):
+        for v in range(1, 26):
             bot.get('http://magento-site.net/computer-accessories.html?p='+str(v))
             time.sleep(15)
 
@@ -52,13 +52,13 @@ class TwitterBot:
                 img = bot.find_element_by_xpath('//html/body/div[3]/div/div[2]/div[1]/div/div[1]/div/div[4]/div[1]/form/div[3]/div[1]/div/a/img').get_attribute('src')
                 urllib.request.urlretrieve(img, "image{}.png".format(str(n)))
 
-                if v == 17:
+                if v == 1:
                     bot.execute_script("window.open('');")
                 bot.switch_to.window(bot.window_handles[1])
                 time.sleep(2)
 
-                if v == 17:
-                    bot.get('http://emd.genuss.ng/admin_q0n5jd/')
+                if v == 1:
+                    bot.get('magento.site/')
                     time.sleep(5)
                     email = bot.find_element_by_name('login[username]')
                     password = bot.find_element_by_name('login[password]')
@@ -151,6 +151,3 @@ class TwitterBot:
 
 ed =  TwitterBot('username','password')
 ed.scrape()
-# ed.login()
-# ed.addProduct()
-# ed.like_tweet('i love you')
